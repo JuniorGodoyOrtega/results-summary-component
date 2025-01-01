@@ -1,5 +1,19 @@
 const jsonUrl = "./data.json";
 
+const colorsBackground = {
+  Reaction: "hsl(0, 100%, 90%)",
+  Memory: "hsl(39, 100%, 85%)",
+  Verbal: "hsl(166, 100%, 85%)",
+  Visual: "hsl(234, 85%, 90%)"
+};
+
+const colorsText = {
+  Reaction: "hsl(0, 100%, 67%)",
+  Memory: "hsl(39, 100%, 56%)",
+  Verbal: "hsl(166, 100%, 37%)",
+  Visual: "hsl(234, 85%, 45%)"
+};
+
 const summaryContainer = document.getElementById("summary-container");
 
 fetch(jsonUrl).then((response) => response.json());
@@ -14,14 +28,15 @@ fetch(jsonUrl)
     data.forEach((item) => {
       const summaryItem = document.createElement('div');
       summaryItem.className = 'summary-item';
+      summaryItem.style.backgroundColor = colorsBackground[item.category];
   
       const icon = document.createElement('img');
       icon.src = item.icon;
-      icon.alt = `${item.category} icon`;
+      icon.alt = `${item.category.toLowerCase()}-icon`;
       icon.className = 'summary-icon';
   
       const label = document.createElement('span');
-      label.className = 'label';
+      label.className = `${item.category.toLowerCase()}-label`;
       label.textContent = item.category;
   
       const score = document.createElement('span');

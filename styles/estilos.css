@@ -28,3 +28,128 @@ body {
     font-size: var(--font-size-body-copy);
     color: var(--neutral-color-dark-gray-blue);
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    display: flex;
+    max-width: 600px;
+    background: var(--neutral-color-white);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: var(--font-size-body-copy);
+}
+
+.card-header, .summary-section {
+    width: 50%;
+}
+
+.card-header {
+    background: linear-gradient(to bottom, var(--gradient-light-slate-blue), var(--gradient-light-royal-blue));
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    color: var(--neutral-color-white);
+}
+
+.card-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, var(--gradient-violet-blue), var(--gradient-persian-blue));
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    margin: 20px;
+}
+
+.score-number {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.score-total {
+    font-size: 12px;
+    color: var(--gradient-light-slate-blue);
+    font-weight: 500;
+}
+
+.card-description{
+    text-align: center;
+    font-size: 14px;
+    padding: 0 30px;
+}
+
+.summary-section {
+    padding: 30px;
+}
+
+.card-summary-button {
+    display: block;
+    background: var(--neutral-color-dark-gray-blue);
+    color: var(--neutral-color-white);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.section-title {
+    padding-bottom: 20px;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 0;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.summary-icon {
+    margin: 0 10px;
+}
+
+.section-title {
+    font-size: var(--font-size-body-copy);
+}
+
+.reaction-label {
+    color: var(--primary-color-ligth-red); 
+    flex-grow: 1;
+}
+
+.memory-label {
+    color: var(--primary-color-orangey-yellow);
+    flex-grow: 1;
+}
+
+.verbal-label {
+    color: var(--primary-color-green-teal);
+    flex-grow: 1;
+}
+
+.visual-label {
+    color: var(--primary-color-cobalt-blue);
+    flex-grow: 1;
+}
+
+.score {
+    margin-right: 10px;
+}
