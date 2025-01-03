@@ -1,17 +1,10 @@
 const jsonUrl = "./data.json";
 
 const colorsBackground = {
-  Reaction: "hsl(0, 100%, 90%)",
-  Memory: "hsl(39, 100%, 85%)",
-  Verbal: "hsl(166, 100%, 85%)",
-  Visual: "hsl(234, 85%, 90%)"
-};
-
-const colorsText = {
-  Reaction: "hsl(0, 100%, 67%)",
-  Memory: "hsl(39, 100%, 56%)",
-  Verbal: "hsl(166, 100%, 37%)",
-  Visual: "hsl(234, 85%, 45%)"
+  Reaction: "hsla(0, 100%, 67%, 0.1)",
+  Memory: "hsla(39, 100%, 56%, 0.1)",
+  Verbal: "hsla(166, 100%, 37%, 0.1)",
+  Visual: "hsla(234, 85%, 45%, 0.1)"
 };
 
 const summaryContainer = document.getElementById("summary-container");
@@ -41,7 +34,17 @@ fetch(jsonUrl)
   
       const score = document.createElement('span');
       score.className = 'score';
-      score.textContent = ` ${item.score} / 100`;
+  
+      const scoreNumber = document.createElement('span');
+      scoreNumber.className = 'score-number';
+      scoreNumber.textContent = item.score;
+  
+      const scoreText = document.createElement('span');
+      scoreText.className = 'score-text';
+      scoreText.textContent = ' / 100';
+  
+      score.appendChild(scoreNumber);
+      score.appendChild(scoreText);
   
       summaryItem.appendChild(icon);
       summaryItem.appendChild(label);
@@ -49,4 +52,4 @@ fetch(jsonUrl)
   
       summaryContainer.appendChild(summaryItem);
     });
-  }
+  }  

@@ -7,8 +7,8 @@
     --primary-color-cobalt-blue: hsl(234, 85%, 45%);
     --gradient-light-slate-blue: hsl(252, 100%, 67%);
     --gradient-light-royal-blue: hsl(241, 81%, 54%);
-    --gradient-violet-blue: hsla(256, 72%, 46%, 1);
-    --gradient-persian-blue: hsla(241, 72%, 46%, 0);
+    --gradient-violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --gradient-persian-blue-circle: hsla(241, 72%, 46%, 0);
     --neutral-color-white: hsl(0, 0%, 100%);
     --neutral-color-pale-blue: hsl(221, 100%, 96%);
     --neutral-color-light-lavender: hsl(241, 100%, 89%);
@@ -45,7 +45,9 @@ body {
 }
 
 .card-title {
+    --neutral-color-white: hsla(0, 0%, 100%, 0.6);
     font-size: var(--font-size-body-copy);
+    color: var(--neutral-color-white);
 }
 
 .card-header, .summary-section {
@@ -69,28 +71,31 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, var(--gradient-violet-blue), var(--gradient-persian-blue));
+    background: linear-gradient(to bottom, var(--gradient-violet-blue-circle), var(--gradient-persian-blue-circle));
     border-radius: 50%;
-    height: 120px;
-    width: 120px;
+    height: 140px;
+    width: 140px;
     margin: 20px;
 }
 
-.score-number {
-    font-size: 3rem;
-    font-weight: 800;
+.score-total {
+    font-size: 14px;
+    --neutral-color-white: hsla(0, 0%, 100%, 0.4);
+    color:  var(--neutral-color-white);
+    font-weight: 600;
+    font-family: var(--font-family-hanken-grotesk);
 }
 
-.score-total {
-    font-size: 12px;
-    color: var(--gradient-light-slate-blue);
-    font-weight: 500;
+.card-subtitle {
+    font-size: 24px;
 }
 
 .card-description{
     text-align: center;
     font-size: 14px;
     padding: 0 30px;
+    --neutral-color-pale-blue: hsla(221, 100%, 96%, 0.7);
+    color: var(--neutral-color-pale-blue);
 }
 
 .summary-section {
@@ -106,6 +111,7 @@ body {
     border-radius: 30px;
     text-align: center;
     margin-top: 40px;
+    font-size: 14px;
 }
 
 .section-title {
@@ -120,6 +126,8 @@ body {
     margin-bottom: 12px;
     border-radius: 10px;
     overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .summary-icon {
@@ -131,7 +139,7 @@ body {
 }
 
 .reaction-label {
-    color: var(--primary-color-ligth-red); 
+    color: var(--primary-color-ligth-red);
     flex-grow: 1;
 }
 
@@ -152,4 +160,19 @@ body {
 
 .score {
     margin-right: 10px;
+}
+
+.score-number-result {
+    font-weight: 800;
+    font-size: 3.5rem;
+}
+
+.score-number {
+    font-weight: 800;
+}
+
+.score-text {
+    --neutral-color-dark-gray-blue: hsla(224, 30%, 27%, 0.4);
+    font-weight: 800;
+    color: var(--neutral-color-dark-gray-blue);
 }
