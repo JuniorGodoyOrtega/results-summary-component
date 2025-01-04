@@ -176,3 +176,36 @@ body {
     font-weight: 800;
     color: var(--neutral-color-dark-gray-blue);
 }
+
+@media screen and (max-width: 426px) {
+    
+    .card {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .card-header, .summary-section {
+        width: 100%;
+    }
+
+    .card-header {
+        border-radius: 0 0 30px 30px;
+    }
+
+    .card-score {
+        margin: 20px;
+    }
+
+    .container {
+        align-items: stretch;
+    }
+
+    .card-summary-button {
+        margin-top: 20px;
+        padding: 20px 20px;
+        font-size: 18px;
+    }
+}
